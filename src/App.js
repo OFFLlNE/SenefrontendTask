@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Toggle from './Toggle';
+const questions = [
+  { id: 'pet', options: ['Dog', 'Cat'], correct: 'Dog' },
+  {
+    id: 'food',
+    options: ['Pizza', 'Ice Cream', 'Hamburger'],
+    correct: 'Ice Cream',
+  },
+  { id: 'season', options: ['Summer', 'Winter'], correct: 'Summer' },
+];
 
+const App = () => {
+  return questions.map((questionSet) => {
+    return (
+      <Toggle
+        key={questionSet.id}
+        questionOptions={questionSet.options}
+        correctAnswer={questionSet.correct}
+      ></Toggle>
+    );
+  });
+};
 export default App;

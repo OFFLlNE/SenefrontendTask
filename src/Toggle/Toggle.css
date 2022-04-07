@@ -1,0 +1,12 @@
+.toggle-questions {
+  background: rgb(174, 174, 245);
+  min-width: 280px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.toggle-option {
+  background: rgb(255, 208, 160);
+  padding: 20px 100px;
+}
