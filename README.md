@@ -14,11 +14,10 @@
 ## Assumptions & Limitations & TODOs
 
 1. User can access the correct answers when inspecting the code
-2. Background doesn't change when customer is getting closer to the correct answer
-3. Using propTypes, because ran into some issues when tried to apply TypeScript mid-coding
-4. Responsiveness wraps text instead of inputs
-5. Animation when switching options is not there
-6. Randomizing questions
+2. Using propTypes, because ran into some issues when tried to apply TypeScript mid-coding
+3. Responsiveness wraps text instead of inputs
+4. Animation when switching options is not there
+5. Randomizing questions
 
 ### Outline
 
