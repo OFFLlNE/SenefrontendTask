@@ -16,7 +16,7 @@
 1. User can access the correct answers when inspecting the code
 2. Using propTypes, because ran into some issues when tried to apply TypeScript mid-coding
 3. Responsiveness wraps text instead of inputs (Not as in mocks)
-4. Animation when switching options is not there
+4. Animation when choosing option is different than in mocks
 
 ### Outline
 
