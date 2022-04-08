@@ -1,3 +1,5 @@
+![finalDemo](https://user-images.githubusercontent.com/8721312/162482212-d3887695-08e6-4066-8833-3d135e4c6ff9.gif)
+
 ## Contribution
 
 1. `npm i`
@@ -16,7 +18,7 @@
 1. User can access the correct answers when inspecting the code
 2. Using propTypes, because ran into some issues when tried to apply TypeScript mid-coding
 3. Responsiveness wraps text instead of inputs (Not as in mocks)
-4. Animation when switching options is not there
+4. Animation when choosing option is different than in mocks
 
 ### Outline
 
