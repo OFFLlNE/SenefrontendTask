@@ -1,44 +1,44 @@
 import React, { useState, useEffect } from 'react';
-
 import './Toggle.css';
-
 const Toggle = ({ questionOptions, correctAnswer }) => {
   const [selectedOption, setSelectedOption] = useState('');
-
-  const onCheckBoxChange = (questionIndex) => {
+  const onRadioChange = (questionIndex) => {
     if (selectedOption !== correctAnswer) {
       setSelectedOption(questionOptions[questionIndex]);
     }
   };
-
   useEffect(() => {
     if (selectedOption === correctAnswer) {
-      console.log('THIS IS THE CORRECT ON!!!');
+      console.log('THIS IS THE CORRECT ONE!!!');
     }
   }, [correctAnswer, selectedOption]);
-
   return (
     <>
       Current selected option: {selectedOption}
       <div className="toggle-questions">
         {questionOptions.map((option, optionIndex) => {
           return (
-            <div key={option}>
-              <label htmlFor={option} className="toggle-option">
-                {option}
-              </label>
+            <label
+              key={option}
+              htmlFor={option}
+              className={
+                selectedOption === option
+                  ? 'toggle-option active'
+                  : 'toggle-option'
+              }
+            >
               <input
                 id={option}
-                type="checkbox"
+                type="radio"
                 checked={selectedOption === option}
-                onChange={() => onCheckBoxChange(optionIndex)}
+                onChange={() => onRadioChange(optionIndex)}
               />
-            </div>
+              {option}
+            </label>
           );
         })}
       </div>
     </>
   );
 };
-
 export default Toggle;

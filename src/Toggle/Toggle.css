@@ -1,12 +1,21 @@
 .toggle-questions {
-  background: rgb(174, 174, 245);
-  min-width: 280px;
+  background: rgb(255, 208, 160);
+  margin: 15px;
   width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  border-radius: 50px;
 }
-
 .toggle-option {
-  background: rgb(255, 208, 160);
-  padding: 20px 100px;
+  padding: 20px 0px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+.active {
+  background: rgb(114, 83, 51);
+  border-radius: 50px;
+}
+input {
+  -webkit-appearance: none;
 }
