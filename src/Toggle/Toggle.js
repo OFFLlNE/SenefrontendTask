@@ -16,6 +16,7 @@ const Toggle = ({ questionOptions, correctAnswer, addCorrectCounter }) => {
       addCorrectCounter();
     }
   }, [correctAnswer, selectedOption]);
+
   return (
     <>
       <div className="toggle-questions">

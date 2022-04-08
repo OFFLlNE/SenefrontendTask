@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 import Toggle from './Toggle';
@@ -23,10 +23,27 @@ const questions = [
 
 const App = () => {
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [backgroundColor, setBackgroundColor] = useState('#FFDAB9');
   const questionCount = questions.length;
 
+  const backgroundChanger = () => {
+    const correctAnswerProgression = correctAnswers / questionCount;
+
+    if (correctAnswers === questionCount) setBackgroundColor('#98FB98');
+    if (correctAnswerProgression <= 0.5 && correctAnswerProgression > 0) {
+      setBackgroundColor('#FFE4B5');
+    }
+    if (correctAnswerProgression > 0.5 && correctAnswerProgression < 1) {
+      setBackgroundColor('#F0E68C');
+    }
+  };
+
+  useEffect(() => {
+    backgroundChanger();
+  }, [correctAnswers]);
+
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: backgroundColor }}>
       <h2>What are the ideal conditions inside an office?</h2>
       {questions.map((questionSet) => {
         return (
