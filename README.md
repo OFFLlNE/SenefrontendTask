@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+## Contribution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. `npm i`
+2. `npm start` to start the [development environment](#development-environment) and visually see your changes
+3. Make your changes
+4. Open a new branch, commit your changes, open PR
+5. Get PR reviewed and then merge
 
-## Available Scripts
+## Development environment
 
-In the project directory, you can run:
+1. Run `npm start` (make sure to have ran `npm i` before)
+2. Local website will run on http://localhost:3000/ where you can see your changes made live
 
-### `npm start`
+## Assumptions & Limitations & TODOs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. User can access the correct answers when inspecting the code
+2. Background doesn't change when customer is getting closer to the correct answer
+3. Using propTypes, because ran into some issues when tried to apply TypeScript mid-coding
+4. Responsiveness wraps text instead of inputs
+5. Animation when switching options is not there
+6. Randomizing questions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Outline
 
-### `npm test`
+The task is to make a component using React.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A video of how the component should work is attached.
 
-### `npm run build`
+The link to the figma project is here which has designs that can help you:
+https://www.figma.com/file/Ee8fqEKdF5ZXpmCGflCdMj/Seneca-tech-task?node-id=0%3A1
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**TIP** If you haven't used figma before. Checkout the "code" section inside the "inspect" tab on the right hand side of the screen to see CSS properties:
+https://help.figma.com/hc/en-us/articles/360055203533-Use-the-Inspect-panel#View_code
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Requirements, please:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- State any assumptions or limitations of your solution in the repository readme
+- Put your soluton in git repo & email the link once you are done
+- Some form of type checking should be used e.g. flow, propTypes, typescript
+- The component should be responsive down to 320px
+- The solution should lock once the correct answer is reached so the toggles can no longer be switched
+- Ignore the navbar or footer just the toggles component itself
+- The toggles should animate between the two states (see attached video)
+- The background color should change in proportion to how "correct" the answer is (see video attached)
+- The component should be reusable & extendable, it should be able to accomodate the question changing from that in the video to e.g:
 
-### `npm run eject`
+Q. "What are the ideal conditions inside an office?"
+A. (good pay, bad pay) (lot of meetings, less meetings), (free coffee, expensive coffee), (bear in office, dog in office).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Extension:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The order of the questions & answer positions should be randomised
+- You solution should be able to accomodate answers with both two and three toggle positions in the answers. For example:
+  Q. "Which are the best sports people & teams?"
+  A. (Liverpool, Chelsea, Man Utd), (Serena Williams, Naomi Osaka)
+- You should make it easy to switch between the active question
